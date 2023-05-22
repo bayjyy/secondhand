@@ -10,7 +10,7 @@ import crud
 
 book_router = APIRouter()
 
-@book_router.post('/add-book')
+@book_router.post('/add')
 def add_book(req: BookSchema, db: Session = Depends(get_db)):
     try:
         result = crud.create_book(req, db)
